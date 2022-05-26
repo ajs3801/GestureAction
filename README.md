@@ -1,5 +1,5 @@
 # GestureAction
-This repository is for implementing the variety of functionality through hand gesture.
+This repository is for implementing the variety of functionality through hand gesture in front of user's DESKTOP
 
 # Just sketch of this project
 1. Detect hand-joint
