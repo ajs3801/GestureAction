@@ -1,5 +1,5 @@
 # GestureAction
-This repository is for implementing the variety of functionality through hand gesture.
+This repository is for implementing the variety of functionality through hand gesture in front of user's DESKTOP
 
 # Just sketch of this project
 1. Detect hand-joint
@@ -39,6 +39,6 @@ MediaPipe in iOS [(link to see more)](https://google.github.io/mediapipe/getting
 
 ## License information
 
-MediaPipe | Apache License 2.0
+MediaPipe | Apache License 2.0 [Apache License](https://www.apache.org/licenses/LICENSE-2.0)
 
-pycaw | MIT License
+pycaw | MIT License [MIT License](https://opensource.org/licenses/MIT)
