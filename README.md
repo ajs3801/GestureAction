@@ -2,6 +2,9 @@
 This repository is for implementing the variety of action through hand's gesture.
 
 # Just sketch of this project
+1. Detect hand-joint
+2. Extract the data between each joint and add functionality
+3. Extend functionality to Web or App
 
 ## 1. Detect hand-joint
 
@@ -17,7 +20,16 @@ First, gesture-motion-detectection to control Window's volumn.
 
 how to control window's audio? Maybe use pycaw [link to pycaw](https://github.com/AndreMiras/pycaw)
 
+## 3. Extend functionality to Web or App
+
+MediaPipe in javascript [link to see more](https://google.github.io/mediapipe/getting_started/javascript.html)
+
+MediaPipe in Android [link to see more](https://google.github.io/mediapipe/getting_started/android.html)
+
+MediaPipe in iOS [link to see more](https://google.github.io/mediapipe/getting_started/ios.html)
+
 ## License information
+
 MediaPipe | Apache License 2.0
 
 pycaw | MIT License
