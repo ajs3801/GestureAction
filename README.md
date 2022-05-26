@@ -17,7 +17,7 @@ the extracted data through MediaPipe
 
 ## 2. Extract the data between each joint and add functionality
 
-First, gesture-motion-detectection to control Window's volumn.
+First, gesture-motion-detection to control Window's volumn.
 
 how to control window's audio? Maybe use pycaw
 
