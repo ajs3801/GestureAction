@@ -17,12 +17,16 @@ the extracted data through MediaPipe
 
 ## 2. Extract the data between each joint and add functionality
 
-First, gesture-motion-detection to control Window's volumn.
+(idea 1), gesture-motion-detection to control Window's volumn.
 
 how to control window's audio? Maybe use pycaw
 
 - [link to pycaw github page](https://github.com/AndreMiras/pycaw)
 - [link to pycaw information](https://pypi.org/project/pycaw/)
+
+(idea 2), gesture-motion-detection to swap multi-desktop
+
+how to implement? Maybe use pyautogui to control keyboard
 
 ## 3. Extend functionality to Web or App
 
