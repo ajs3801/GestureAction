@@ -28,6 +28,8 @@ how to control window's audio? Maybe use pycaw
 
 how to implement? Maybe use pyautogui to control keyboard
 
+[link to see more about pyautogui](https://pyautogui.readthedocs.io/en/latest/index.html)
+
 ## 3. Extend functionality to Web or App
 
 ### 1. javascript
