@@ -9,7 +9,6 @@ capture = cv2.VideoCapture(0)
 frameWidth = capture.get(cv2.CAP_PROP_FRAME_WIDTH)
 frameHeight = capture.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
-
 with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.7, min_tracking_confidence=0.7, max_num_hands=2) as hands:
  
     while (True):
@@ -32,6 +31,6 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.7, mi
  
         if cv2.waitKey(1) == 27:
             break
- 
+
 cv2.destroyAllWindows()
 capture.release()
