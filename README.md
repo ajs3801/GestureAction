@@ -12,8 +12,14 @@ how? Maybe try to use MediaPipe
 - [link to MediaPipe github page](https://github.com/google/mediapipe)
 - [link to MediaPipe information](https://google.github.io/mediapipe/getting_started/python.html)
 
-the extracted data through MediaPipe
+The extracted data through MediaPipe
 <img width="914" alt="Screen Shot 2022-05-26 at 7 56 47 PM" src="https://user-images.githubusercontent.com/43237393/170474742-b8905415-85fe-4448-b4ce-01bbbd7c5c0f.png">
+
+The extracted data in Local Desktop
+
+![image](https://user-images.githubusercontent.com/43237393/172122107-08d04c98-65f6-4bf6-831c-ab6291c6ab8f.png)
+
+See this wiki page to see how to do [link](https://github.com/ajs3801/GestureAction/wiki/How-to-use-mediapipe-in-Window-using-Jupyter-notebook)
 
 ## 2. Extract the data between each joint and add functionality
 
@@ -45,6 +51,6 @@ MediaPipe in iOS [(link to see more)](https://google.github.io/mediapipe/getting
 
 ## License information
 
-MediaPipe | Apache License 2.0 [Apache License](https://www.apache.org/licenses/LICENSE-2.0)
+MediaPipe | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
-pycaw | MIT License [MIT License](https://opensource.org/licenses/MIT)
+pycaw | [MIT License](https://opensource.org/licenses/MIT)
