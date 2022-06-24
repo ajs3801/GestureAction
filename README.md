@@ -1,14 +1,15 @@
 # GestureAction
 This repository is for implementing the variety of functionality through hand gesture in front of user's DESKTOP
 
-# Just sketch of this project
+# How to implement?
 1. Detect hand-joint
 2. Extract the data between each joint and add functionality
 3. Extend functionality to Web or App
 
 ## 1. Detect hand-joint
 
-how? Maybe try to use MediaPipe 
+Use opensource MediaPipe
+
 - [link to MediaPipe github page](https://github.com/google/mediapipe)
 - [link to MediaPipe information](https://google.github.io/mediapipe/getting_started/python.html)
 
@@ -23,31 +24,23 @@ See this wiki page to see how to do [link](https://github.com/ajs3801/GestureAct
 
 ## 2. Extract the data between each joint and add functionality
 
-(idea 1), gesture-motion-detection to control Window's volumn.
+### [idea1] : using hand-joint to scroll down and up
 
-how to control window's audio? Maybe use pycaw
+### preview
+![Screen_Recording_2022-06-24_at_5_28_17_PM_AdobeExpress](https://user-images.githubusercontent.com/43237393/175544041-4d64f946-08b5-438e-bcd9-70dfc1471437.gif)
 
-- [link to pycaw github page](https://github.com/AndreMiras/pycaw)
-- [link to pycaw information](https://pypi.org/project/pycaw/)
+### description
+If you get close the distance between the thumb and index finger, the scroll will move toward up.
+If you get close the distance between the thumb and ring finger, the scroll will move toward down.
 
-(idea 2), gesture-motion-detection to swap multi-desktop
+### how to use
 
-how to implement? Maybe use pyautogui to control keyboard
+```
+main/ScrollDownAndUp.py
+```
 
-[link to see more about pyautogui](https://pyautogui.readthedocs.io/en/latest/index.html)
-
-## 3. Extend functionality to Web or App
-
-### 1. javascript
-MediaPipe in javascript [(link to see more)](https://google.github.io/mediapipe/getting_started/javascript.html)
-
-MediaPipe in javascript information [(link to see more)](https://google.github.io/mediapipe/solutions/hands#javascript-solution-api)
-
-### 2. Android
-MediaPipe in Android [(link to see more)](https://google.github.io/mediapipe/getting_started/android.html)
-
-### 3. iOS
-MediaPipe in iOS [(link to see more)](https://google.github.io/mediapipe/getting_started/ios.html)
+### [idea2] : using hand joint to wake up the gesture recognition AI
+(now developing)
 
 ## License information
 
