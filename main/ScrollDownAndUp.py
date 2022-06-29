@@ -11,7 +11,6 @@ import pyautogui
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 
-#
 # cap = cv2.VideoCapture(0) #Windows
 # cap = cv2.VideoCapture(0,cv2.CAP_AVFOUNDATION) #MacOS
 cap = cv2.VideoCapture(0) #MacOS
@@ -55,11 +54,11 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
                 
                 if (up == True):
                     print("scroll up")
-                    pyautogui.scroll(2)
+                    pyautogui.scroll(1)
                 
                 elif (down == True):
                     print("scroll down")
-                    pyautogui.scroll(-2)
+                    pyautogui.scroll(-1)
                     
                 mp_drawing.draw_landmarks(image,hand,mp_hands.HAND_CONNECTIONS,
                                          mp_drawing.DrawingSpec(color=(121,22,76), thickness=2, circle_radius=4),

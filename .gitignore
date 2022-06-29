@@ -1,3 +1,4 @@
 Library/MediaPipe/node_modules
 .ipynb_checkpoints
 HandPoseDetection.ipynb
+train/ex1-ScrollUpandScrollDown/last.pt
