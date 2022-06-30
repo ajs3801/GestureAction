@@ -44,13 +44,14 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         #print(results)
         
+        DISTANCE = 0.06
         #Rendering results
         if results.multi_hand_landmarks:
             for num,hand in enumerate(results.multi_hand_landmarks):
                 distanceUP = dlist(hand.landmark[4].x,hand.landmark[4].y,hand.landmark[8].x,hand.landmark[8].y)
                 distanceDOWN = dlist(hand.landmark[4].x,hand.landmark[4].y,hand.landmark[16].x,hand.landmark[16].y)
-                up =  distanceUP < 0.06
-                down = distanceDOWN < 0.06
+                up =  distanceUP < DISTANCE
+                down = distanceDOWN < DISTANCE
                 
                 if (up == True):
                     print("scroll up")

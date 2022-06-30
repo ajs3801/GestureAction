@@ -13,6 +13,7 @@ cap = cv2.VideoCapture(0) #MacOS
 
 def dlist(x1,y1,x2,y2):
     return math.sqrt(math.pow(x1-x2,2)) + math.sqrt(math.pow(y1-y2,2))
+
 with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) as hands:
     while cap.isOpened():
     #ret
@@ -39,18 +40,19 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         #print(results)
         
+        DISTANCE = 0.06
         #Rendering results
         if results.multi_hand_landmarks:
             for num,hand in enumerate(results.multi_hand_landmarks):
                 if (num == 0):
                     distance = dlist(hand.landmark[4].x,hand.landmark[4].y,hand.landmark[12].x,hand.landmark[12].y)
-                    open =  distance < 0.06
+                    open =  distance < DISTANCE
                     if (open == True):
                         pyautogui.press('enter')
                 
                 if (num == 1):
                     distance = dlist(hand.landmark[4].x,hand.landmark[4].y,hand.landmark[12].x,hand.landmark[12].y)
-                    open =  distance < 0.06
+                    open =  distance < DISTANCE
                     if (open == True):
                         pyautogui.press('h')
                 mp_drawing.draw_landmarks(image,hand,mp_hands.HAND_CONNECTIONS,
