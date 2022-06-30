@@ -58,6 +58,6 @@ You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/mai
 > now developing
 
 # Make your own model
-In CustomTrain/custom folder, you can make your own custom dataset and train it through yolo v5.
+In ```CustomTrain/custom``` folder, you can make your own custom dataset and train it through yolo v5.
 
 If you want to see how to train your custom dataset, see this [page](https://velog.io/@ajs3801/Yolo-PyTorch-custom-dataset-%ED%95%99%EC%8A%B5%EC%8B%9C%ED%82%A4%EA%B8%B0-1)
