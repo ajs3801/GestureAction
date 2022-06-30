@@ -54,7 +54,7 @@ You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/mai
 
 ### improvement
 > It is not accurate to detect the sign well, so the further improvment of dataset will be required.
-## [idea1] : recognize hand's gesture (movement) (ex)hello, shake hands
+## NEXT DEVELOPING : recognize hand's gesture(with movement) (ex)hello, shake hands
 > now developing
 
 # Make your own model
