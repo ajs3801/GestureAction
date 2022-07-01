@@ -8,8 +8,12 @@ This repository is for implementing the variety of functionality through hand ge
 
 # 1. Detect hand-joint
 
-1. Use opensource MediaPipe -> result:1
-2. Use deep learning -> result:2 , result:3
+## posture
+(1) Use opensource MediaPipe -> result:1
+
+(2) Use deep learning -> result:2 , result:3
+## gesture
+(3) Gesture Recognition (hand)
 
 # 2. Extract the data between each joint and add functionality
 
@@ -54,10 +58,11 @@ You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/mai
 
 ### improvement
 > It is not accurate to detect the sign well, so the further improvment of dataset will be required.
-## [idea1] : recognize hand's gesture (movement) (ex)hello, shake hands
+
+## NEXT DEVELOPING : recognize hand's gesture (ex)hello, shake hands and add functionality
 > now developing
 
 # Make your own model
-In CustomTrain/custom folder, you can make your own custom dataset and train it through yolo v5.
+In ```CustomTrain/custom``` folder, you can make your own custom dataset and train it through yolo v5.
 
 If you want to see how to train your custom dataset, see this [page](https://velog.io/@ajs3801/Yolo-PyTorch-custom-dataset-%ED%95%99%EC%8A%B5%EC%8B%9C%ED%82%A4%EA%B8%B0-1)
