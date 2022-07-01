@@ -8,8 +8,12 @@ This repository is for implementing the variety of functionality through hand ge
 
 # 1. Detect hand-joint
 
-1. Use opensource MediaPipe -> result:1
-2. Use deep learning -> result:2 , result:3
+## posture
+(1) Use opensource MediaPipe -> result:1
+
+(2) Use deep learning -> result:2 , result:3
+## gesture
+(3) Gesture Recognition (hand)
 
 # 2. Extract the data between each joint and add functionality
 
@@ -54,7 +58,8 @@ You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/mai
 
 ### improvement
 > It is not accurate to detect the sign well, so the further improvment of dataset will be required.
-## NEXT DEVELOPING : recognize hand's gesture(with movement) (ex)hello, shake hands
+
+## NEXT DEVELOPING : recognize hand's gesture (ex)hello, shake hands and add functionality
 > now developing
 
 # Make your own model
