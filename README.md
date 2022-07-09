@@ -12,9 +12,9 @@ This repository is for implementing the variety of functionality through hand ge
 (1) Use opensource MediaPipe -> result:1
 
 (2) Use deep learning -> result:2 , result:3
-## gesture
-(3) Gesture Recognition (hand)
 
+## gesture
+(3) Gesture Recognition (hand) -> result:4
 # 2. Extract the data between each joint and add functionality
 
 ## [result:1] : using hand-joint to scroll down and up
@@ -59,8 +59,19 @@ You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/mai
 ### improvement
 > It is not accurate to detect the sign well, so the further improvment of dataset will be required.
 
-## NEXT DEVELOPING : recognize hand's gesture (ex)hello, shake hands and add functionality
-> now developing
+## [result:4] : using tensorflow LSTM
+
+### preview
+> add later
+
+### description
+If you do gesture slicing to left -> recognize that gesture is move left.
+
+### where?
+You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/main/main/05_LeftAndRight.py)
+
+### improvement
+> implement this not only using holistic but also pose
 
 # Make your own model
 In ```CustomTrain/custom``` folder, you can make your own custom dataset and train it through yolo v5.
