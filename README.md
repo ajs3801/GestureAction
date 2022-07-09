@@ -73,7 +73,9 @@ You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/mai
 ### improvement
 > implement this not only using holistic but also pose
 
-## NEXT DEVELOPING : POSE ACTION RECOGNITION USING LSTM OR SKELETON MHI AND ST-GCN
+## NEXT DEVELOPING 
+> POSE ACTION RECOGNITION USING LSTM OR SKELETON MHI AND ST-GCN
+> 
 # Make your own model
 In ```CustomTrain/custom``` folder, you can make your own custom dataset and train it through yolo v5.
 
