@@ -38,7 +38,7 @@ for action in actions:
         fps = int(fps)
 
         #                                       운동번호 일련번호 번호 프레임 flip(true or false)
-        videopath = os.path.join(DATA_PATH,action,'{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps).str(0)))
+        videopath = os.path.join(DATA_PATH,action,'{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(0)))
         videopath_flip = os.path.join(DATA_PATH,action,'{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(1)))
 
         out = cv2.VideoWriter(videopath, fourcc, fps, (width,height))
@@ -52,6 +52,8 @@ for action in actions:
             print('Collecting frames for {} Video Number {}'.format(action, sequence))
             cv2.putText(show_frame,'Collecting frames for {} Video Number {}'.format(action, sequence), (50,50), cv2.FONT_HERSHEY_PLAIN, 2, (0,0,255), 2)
             cv2.imshow('Realtime view',show_frame)
+
+            frame_flip = cv2.flip(frame, 1)
             # NEW Apply wait logic
             if frame_num == 0: 
                 print('STARTING COLLECTION for {} wait...'.format(action))
@@ -60,13 +62,13 @@ for action in actions:
                 # Show to screen
 
                 out.write(frame) # 영상데이터만 저장 (소리 X)
-                out_flip.write(frame)
+                out_flip.write(frame_flip)
 
             else: 
                 # Show to screen
                 # cv2.imshow('Data collection', frame)
                 out.write(frame) # 영상데이터만 저장 (소리 X)
-                out_flip.write(frame)
+                out_flip.write(frame_flip)
 
             # Break gracefully
             if cv2.waitKey(10) & 0xFF == ord('q'):
