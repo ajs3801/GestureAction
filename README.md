@@ -73,9 +73,27 @@ You can see the code in [this](https://github.com/ajs3801/GestureAction/blob/mai
 ### improvement
 > implement this not only using holistic but also pose
 
+## [result:5] : skeleton MHI and image classification
+
+### preview
+<img width="400" alt="Screen Shot 2022-07-16 at 10 15 31 PM" src="https://user-images.githubusercontent.com/43237393/179356495-ff91775c-0eed-4072-a58d-9e985a5bc063.png">
+
+
+### description
+Train the left moving skeleton MHI picture and also the right moving skeleton MHI picture.
+and resize it to 480x160 and put it to the model.
+
+### where?
+> add later
+
+### improvement
+> apply multi-action recognition
+
 ## NEXT DEVELOPING 
 > POSE ACTION RECOGNITION USING SKELETON COORDINATE LSTM
+
 > ACTION RECOGNITION USING SKELETON MHI
+
 # Make your own model
 In ```CustomTrain/custom``` folder, you can make your own custom dataset and train it through yolo v5.
 
