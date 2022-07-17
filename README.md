@@ -15,6 +15,8 @@ This repository is for implementing the variety of functionality through hand ge
 
 ## gesture
 (3) Gesture Recognition (hand) -> result:4
+
+(4) skeleton MHI (action recognition) -> result:5
 # 2. Extract the data between each joint and add functionality
 
 ## [result:1] : using hand-joint to scroll down and up
