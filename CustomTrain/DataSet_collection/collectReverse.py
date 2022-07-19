@@ -11,7 +11,7 @@ import uuid
 DATA_PATH = os.path.join('Data') 
 
 # Actions that we try to detect
-actions = np.array(['squat-down','squat-up','pushup-down','pushup-up','lunge-down','lunge-up','crunch-down','crunch-up'])
+actions = np.array(['squat','pushup','lunge'])
 
 # Thirty videos worth of data
 no_sequences = 5
@@ -30,35 +30,29 @@ def ProcessingReverse(videopath,action,action_num,sequence,flip):
   height = round(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
   fps = cap.get(cv2.CAP_PROP_FPS)
   fps = int(fps)
+  
+  reverse_videopath = os.path.join(DATA_PATH,action+'-up','{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num+1)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(flip)))
+  out = cv2.VideoWriter(reverse_videopath, fourcc, fps, (width,height))
 
-  videopath = os.path.join(DATA_PATH,action,'{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(flip)))
-  out = cv2.VideoWriter(videopath, fourcc, fps, (width,height))
-
-  ret, vid = cap.read()
   count = 0
   ret = True
   frame_list = []
 
   while(ret == True):
     ret, vid = cap.read()
+    if (ret == False):
+      break
     frame_list.append(vid)
     count += 1
 
-  frame_list.pop()
-
-  for frame in frame_list:
-    if cv2.waitKey(25) and 0xFF == ord("q"):
-      break
-
-  cap.release()
-  cv2.destroyAllWindows()
+  # print('count :' ,count)
 
   frame_list.reverse()
 
   # 역재생
   for frame in frame_list:
     out.write(frame)
-    if cv2.waitKey(25) and 0xFF == ord("q"):
+    if cv2.waitKey(10) and 0xFF == ord("q"):
         break
 
   cap.release()
@@ -66,9 +60,9 @@ def ProcessingReverse(videopath,action,action_num,sequence,flip):
   cv2.destroyAllWindows()
 
   if (flip == 0):
-    print('save the original reverse video')
-  else :
-    print('save the flipped reverse video')
+    print('save the original reverse video to {}'.format(videopath))
+  else:
+    print('save the flipped reverse video to {}'.format(videopath))
 
 # NEW LOOP
 # Loop through actions
@@ -84,10 +78,11 @@ for action in actions:
         height = round(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         fps = cap.get(cv2.CAP_PROP_FPS)
         fps = int(fps)
-
+        # videoname = str('0'+str(action_num)+'-'+str(datetime.today().strftime('%Y%m%d%H%M'))+'-'+str(sequence)+'-'+str(fps)+'-'+str(0))
+        # videoname_flip = str('0'+str(action_num)+'-'+str(datetime.today().strftime('%Y%m%d%H%M'))+'-'+str(sequence)+'-'+str(fps)+'-'+str(1))
         #                                       운동번호 일련번호 번호 프레임 flip(true or false)
-        videopath = os.path.join(DATA_PATH,action,'{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(0)))
-        videopath_flip = os.path.join(DATA_PATH,action,'{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(1)))
+        videopath = os.path.join(DATA_PATH,action+'-down','{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(0)))
+        videopath_flip = os.path.join(DATA_PATH,action+'-down','{}-{}-{}-{}-{}.avi'.format(str('0'+str(action_num)),datetime.today().strftime('%Y%m%d%H%M'),str(sequence),str(fps),str(1)))
 
         out = cv2.VideoWriter(videopath, fourcc, fps, (width,height))
         out_flip = cv2.VideoWriter(videopath_flip, fourcc, fps, (width,height))
@@ -131,7 +126,7 @@ for action in actions:
         print('######## DONE ########')
 
         cv2.waitKey(1000)
-    action_num += 1
+    action_num += 2
 
 out.release()
 out_flip.release()
