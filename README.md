@@ -96,6 +96,7 @@ and resize it to 480x160 and put it to the model.
 
 > ACTION RECOGNITION USING SKELETON MHI
 
+> Skeleton MHI + Object Detection
 ## Model
 ```actionmodelv1.pt``` : detect squat and stand
 
