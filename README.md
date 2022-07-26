@@ -7,7 +7,7 @@ This repository is for implementing the variety of functionality through hand ge
 
 ```main``` : results of project
 
-```Model```: Model saving folder
+```Model```: save model
 
 ## posture
 (1) Use opensource MediaPipe -> result:1
