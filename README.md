@@ -10,7 +10,7 @@ This repository is for implementing the variety of functionality through hand ge
 ```Model```: save model
 
 ## posture
-(1) Use opensource MediaPipe -> result:1
+(1) Use opensource MediaPipe -> result:1 , result:6
 
 (2) Use deep learning -> result:2 , result:3
 
@@ -90,6 +90,21 @@ and resize it to 480x160 and put it to the model.
 
 ### improvement
 > apply multi-action recognition
+
+## [result:6] : mediapipe posture detection toolkit
+
+### preview
+> ADD LATER
+
+
+### description
+> ADD LATER
+
+### where?
+> ADD LATER
+
+### improvement
+> make more dataset
 
 ## NEXT DEVELOPING 
 > POSE ACTION RECOGNITION USING SKELETON COORDINATE LSTM
