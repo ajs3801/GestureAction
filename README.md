@@ -119,3 +119,5 @@ and resize it to 480x160 and put it to the model.
 In ```CustomTrain/custom``` folder, you can make your own custom dataset and train it through yolo v5.
 
 If you want to see how to train your custom dataset, see this [page](https://velog.io/@ajs3801/Yolo-PyTorch-custom-dataset-%ED%95%99%EC%8A%B5%EC%8B%9C%ED%82%A4%EA%B8%B0-1)
+
+> OPEN HEALTH AI
